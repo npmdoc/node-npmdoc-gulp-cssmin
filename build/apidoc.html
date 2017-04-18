@@ -61,12 +61,131 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-cssmin">module gulp-cssmin</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-cssmin.gulp-cssmin">
+            function <span class="apidocSignatureSpan"></span>gulp-cssmin
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-cssmin.toString">
+            function <span class="apidocSignatureSpan">gulp-cssmin.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-cssmin.toString">module gulp-cssmin.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-cssmin.toString.toString">
+            function <span class="apidocSignatureSpan">gulp-cssmin.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gulp-cssmin" id="apidoc.module.gulp-cssmin">module gulp-cssmin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-cssmin.gulp-cssmin" id="apidoc.element.gulp-cssmin.gulp-cssmin">
+        function <span class="apidocSignatureSpan"></span>gulp-cssmin
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gulp-cssmin = function (options) {
+	return map(function (file, cb) {
+		if (file.isNull()) {
+			return cb(null, file);
+		}
+
+		if (file.isStream()) {
+			return cb(new gutil.PluginError(&#x27;gulp-cssmin&#x27;, &#x27;Streaming not supported&#x27;));
+		}
+
+		if ([&#x27;.css&#x27;].indexOf(path.extname(file.path)) === -1) {
+			gutil.log(&#x27;gulp-cssmin: Skipping unsupported css &#x27; + gutil.colors.blue(file.relative));
+			return cb(null, file);
+		}
+
+		tempWrite(file.contents, path.extname(file.path), function (err, tempFile) {
+			if (err) {
+				return cb(new gutil.PluginError(&#x27;gulp-cssmin&#x27;, err));
+			}
+
+			fs.stat(tempFile, function (err, stats) {
+				if (err) {
+					return cb(new gutil.PluginError(&#x27;gulp-cssmin&#x27;, err));
+				}
+
+				options = options || {};
+
+				fs.readFile(tempFile, { encoding : &#x27;UTF-8&#x27;}, function(err, data) {
+					if (err) {
+						return cb(new gutil.PluginError(&#x27;gulp-cssmin&#x27;, err));
+					}
+					var minimized = new CleanCSS(options).minify(data).styles;
+					if (options.showLog) {
+						gutil.log(&#x27;gulp-cssmin:&#x27;, gutil.colors.green(&#x27;✔ &#x27;) + file.relative);
+					}
+					file.contents = new Buffer(minimized);
+					cb(null, file);
+				});
+
+			});
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-cssmin.toString" id="apidoc.element.gulp-cssmin.toString">
+        function <span class="apidocSignatureSpan">gulp-cssmin.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-cssmin.toString" id="apidoc.module.gulp-cssmin.toString">module gulp-cssmin.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-cssmin.toString.toString" id="apidoc.element.gulp-cssmin.toString.toString">
+        function <span class="apidocSignatureSpan">gulp-cssmin.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/chilijung/gulp-cssmin/"
-
-    >gulp-cssmin (v0.1.7)</a>
+    <a href="https://github.com/chilijung/gulp-cssmin/">gulp-cssmin (v0.1.7)</a>
 </h1>
 <h4>minify css using gulp</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-cssmin">module gulp-cssmin</a><ol>
 
@@ -114,33 +107,33 @@
 		}
 
 		if (file.isStream()) {
-			return cb(new gutil.PluginError(&#x27;gulp-cssmin&#x27;, &#x27;Streaming not supported&#x27;));
+			return cb(new gutil.PluginError('gulp-cssmin', 'Streaming not supported'));
 		}
 
-		if ([&#x27;.css&#x27;].indexOf(path.extname(file.path)) === -1) {
-			gutil.log(&#x27;gulp-cssmin: Skipping unsupported css &#x27; + gutil.colors.blue(file.relative));
+		if (['.css'].indexOf(path.extname(file.path)) === -1) {
+			gutil.log('gulp-cssmin: Skipping unsupported css ' + gutil.colors.blue(file.relative));
 			return cb(null, file);
 		}
 
 		tempWrite(file.contents, path.extname(file.path), function (err, tempFile) {
 			if (err) {
-				return cb(new gutil.PluginError(&#x27;gulp-cssmin&#x27;, err));
+				return cb(new gutil.PluginError('gulp-cssmin', err));
 			}
 
 			fs.stat(tempFile, function (err, stats) {
 				if (err) {
-					return cb(new gutil.PluginError(&#x27;gulp-cssmin&#x27;, err));
+					return cb(new gutil.PluginError('gulp-cssmin', err));
 				}
 
 				options = options || {};
 
-				fs.readFile(tempFile, { encoding : &#x27;UTF-8&#x27;}, function(err, data) {
+				fs.readFile(tempFile, { encoding : 'UTF-8'}, function(err, data) {
 					if (err) {
-						return cb(new gutil.PluginError(&#x27;gulp-cssmin&#x27;, err));
+						return cb(new gutil.PluginError('gulp-cssmin', err));
 					}
 					var minimized = new CleanCSS(options).minify(data).styles;
 					if (options.showLog) {
-						gutil.log(&#x27;gulp-cssmin:&#x27;, gutil.colors.green(&#x27;✔ &#x27;) + file.relative);
+						gutil.log('gulp-cssmin:', gutil.colors.green('âœ” ') + file.relative);
 					}
 					file.contents = new Buffer(minimized);
 					cb(null, file);
@@ -195,3 +188,4 @@
     ]
 </div>
 </div>
+</body></html>
