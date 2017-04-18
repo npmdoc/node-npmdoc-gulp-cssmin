@@ -1,9 +1,14 @@
-# api documentation for  [gulp-cssmin (v0.1.7)](https://github.com/chilijung/gulp-cssmin/)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-cssmin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-cssmin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-cssmin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-cssmin)
+# npmdoc-gulp-cssmin
+
+#### api documentation for  [gulp-cssmin (v0.1.7)](https://github.com/chilijung/gulp-cssmin/)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-cssmin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-cssmin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-cssmin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-cssmin)
+
 #### minify css using gulp
 
-[![NPM](https://nodei.co/npm/gulp-cssmin.png?downloads=true)](https://www.npmjs.com/package/gulp-cssmin)
+[![NPM](https://nodei.co/npm/gulp-cssmin.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-cssmin)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-cssmin/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp-cssmin_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-cssmin/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-gulp-cssmin/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-cssmin/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-cssmin/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-cssmin/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-cssmin/build/screenCapture.npmPackageListing.svg)
 
@@ -52,13 +57,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "chilijung",
-            "email": "chilijung@gmail.com"
+            "name": "chilijung"
         }
     ],
     "name": "gulp-cssmin",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/chilijung/gulp-cssmin.git"
@@ -69,16 +72,6 @@
     "version": "0.1.7"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-cssmin](#apidoc.module.gulp-cssmin)
-
-
-
-# <a name="apidoc.module.gulp-cssmin"></a>[module gulp-cssmin](#apidoc.module.gulp-cssmin)
 
 
 
