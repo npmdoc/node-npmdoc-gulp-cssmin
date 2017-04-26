@@ -1,6 +1,6 @@
 # npmdoc-gulp-cssmin
 
-#### api documentation for  [gulp-cssmin (v0.1.7)](https://github.com/chilijung/gulp-cssmin/)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-cssmin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-cssmin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-cssmin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-cssmin)
+#### basic api documentation for  [gulp-cssmin (v0.1.7)](https://github.com/chilijung/gulp-cssmin/)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-cssmin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-cssmin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-cssmin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-cssmin)
 
 #### minify css using gulp
 
@@ -69,7 +69,8 @@
     "scripts": {
         "test": "mocha"
     },
-    "version": "0.1.7"
+    "version": "0.1.7",
+    "bin": {}
 }
 ```
 
